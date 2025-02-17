@@ -1,1 +1,21 @@
 <p>parent works!</p>
+<div>
+    <div>
+        <h2>Egyszerű számológép</h2>
+      
+        <label>Első szám: </label>
+        <input type="number" [(ngModel)]="a">
+      
+        <label>Második szám: </label>
+        <input type="number" [(ngModel)]="b">
+      
+        <!-- Child Component meghívása, property binding és event binding -->
+        <app-child [num1]="a" [num2]="b" (result)="onResultReceived($event)"></app-child>
+      
+        <p>Eredmény: {{ result }}</p>
+      </div>
+      
+  
+    <p>Eredmény: {{ result }}</p>
+  </div>
+  
